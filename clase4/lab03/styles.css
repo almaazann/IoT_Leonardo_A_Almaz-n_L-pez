@@ -1,0 +1,120 @@
+/* Simple styles for Lab 3 */
+body {
+    margin: 0;
+    background-color: #f4f4f9;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu {
+    background-color: black;
+    text-align: center;
+    padding: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.menu .name {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.menu span { color: white; }
+
+.container {
+    background-color: white;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    border: 2px solid #dddddd;
+}
+
+h1 { text-align: center; }
+
+h2 {
+    margin-top: 30px;
+    border-bottom: 2px solid #dddddd;
+    padding-bottom: 8px;
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.box {
+    background-color: #fafafa;
+    border: 2px solid #dddddd;
+    text-align: center;
+    padding: 10px;
+    flex: 1;
+    min-width: 130px;
+}
+
+.box h3 { font-size: 16px; }
+.box p { font-size: 28px; font-weight: bold; margin: 10px 0; }
+#available { color: green; }
+#occupied { color: #c62828; }
+
+.legend { font-weight: bold; }
+.green-square, .red-square {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
+    border: 1px solid #333333;
+}
+.green-square { background-color: #3ab968; }
+.red-square { background-color: #e74c3c; }
+
+/* Buttons are displayed as parking spaces, without an image */
+.parking-lot {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 15px;
+    background-color: #eeeeee;
+    border: 2px solid #cccccc;
+}
+
+.space {
+    color: #111111;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    min-height: 58px;
+    padding: 10px 3px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.space.available { background-color: #3ab968; }
+.space.occupied { background-color: #e74c3c; }
+.space:hover { outline: 2px solid #333333; }
+.space:focus-visible { outline: 3px solid #0056b3; }
+
+.control {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 11px 15px;
+    margin: 5px 5px 5px 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+.control:hover { background-color: #003e82; }
+.note { color: #666666; font-size: 14px; }
+
+@media (max-width: 650px) {
+    .container { margin: 12px; padding: 15px; }
+    h1 { font-size: 25px; }
+    .menu { line-height: 2; }
+    .parking-lot { grid-template-columns: repeat(2, 1fr); }
+}

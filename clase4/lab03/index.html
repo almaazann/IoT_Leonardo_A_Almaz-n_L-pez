@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3 - Smart Parking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Menu like the one in my portfolio -->
+    <div class="menu">
+        <a class="name" href="../../index.html">Leonardo Antonio Almazan Lopez</a>
+        <span>|</span>
+        <a href="../../index.html#labs">LABS</a>
+    </div>
+
+    <div class="container">
+        <h1>Lab 3 - Smart Parking System</h1>
+        <p>This website simulates a smart parking lot using JavaScript.</p>
+
+        <h2>Parking Dashboard</h2>
+        <div class="dashboard">
+            <div class="box">
+                <h3>Total spaces</h3>
+                <p id="total">0</p>
+            </div>
+            <div class="box">
+                <h3>Available</h3>
+                <p id="available">0</p>
+            </div>
+            <div class="box">
+                <h3>Occupied</h3>
+                <p id="occupied">0</p>
+            </div>
+            <div class="box">
+                <h3>Occupancy</h3>
+                <p id="percentage">0%</p>
+            </div>
+        </div>
+
+        <h2>Parking Spaces</h2>
+        <p>Click on any parking space to change its status.</p>
+        <p class="legend">
+            <span class="green-square"></span> Available
+            <span class="red-square"></span> Occupied
+        </p>
+
+        <!-- JavaScript creates the parking buttons in this div -->
+        <div id="parking-lot" class="parking-lot"></div>
+        <p id="selected-space">Click on a parking space to see its status.</p>
+
+        <h2>Simulated IoT Sensors</h2>
+        <p>The parking spaces update automatically every 4 seconds.</p>
+        <button class="control" onclick="simulateSensors()">Update sensors now</button>
+        <button class="control" id="pause-button" onclick="pauseSimulation()">Pause automatic updates</button>
+        <button class="control" onclick="randomizeSpaces()">Randomize spaces</button>
+
+        <p>Sensor status: <strong id="sensor-status">Running</strong></p>
+        <p>Last update: <span id="last-update">Not yet</span></p>
+        <hr>
+        <p class="note">All information is simulated. No physical sensors are connected.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

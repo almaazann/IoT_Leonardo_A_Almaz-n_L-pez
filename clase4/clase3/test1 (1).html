@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <script src="myScript.js"></script>
+</head>
+
+<body>
+<h1>My First JavaScript</h1>
+<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+    Click me to display Date and Time
+</button>
+
+<p id = "demo"></p>
+
+
+
+<h2>What can Javascript do?</h2>
+<p id="demo2">Javacript can hide HTML elements</p>
+
+<button type="button" onclick="document.getElementById('demo2').style.display='none'">
+    Click me!
+</button>
+
+<h2>Show Elements</h2>
+<p id="demo3" style="display:none">Javacript can show HTML elements</p>
+
+<button type="button" onclick="document.getElementById('demo3').style.display='block'">
+    Click me!
+</button>
+
+<script>
+    function myFunction() {
+        document.getElementId("demo").innerHTML = "Paragraph changed.";
+    }
+</script>
+
+</body>
+
+
+</html>
